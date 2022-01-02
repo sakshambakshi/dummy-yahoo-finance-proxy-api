@@ -20,8 +20,9 @@ server.get("/get/:symbol", async function (req, res) {
     return res.json(data)
 });
 
+const PORT = process.env.PORT || 3000;
 
-server.listen(8000, async () => {
-    console.log("started")
+server.listen(PORT, async () => {
+    console.log("started @ "+ PORT)
 
 });
