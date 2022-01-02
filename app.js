@@ -1,6 +1,9 @@
 const express = require("express");
 const server = express();
 const cors = require('cors')
+const volleyball = require('volleyball')
+
+server.use(volleyball)
 server.use(cors())
 console.log("hello")
 server.get("/get/:symbol", async function (req, res) {
