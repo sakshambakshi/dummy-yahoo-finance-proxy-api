@@ -2,7 +2,7 @@ const express = require("express");
 const server = express();
 const cors = require('cors')
 server.use(cors())
-
+console.log("hello")
 server.get("/get/:symbol", async function (req, res) {
   const axios = require("axios");
 
@@ -13,6 +13,7 @@ server.get("/get/:symbol", async function (req, res) {
   };
 
   const {data} = await axios(config)
+  console.log({data})
     return res.json(data)
 });
 
